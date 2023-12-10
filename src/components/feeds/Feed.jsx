@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Comments from "../comments/Comments";
 import { toast } from "react-toastify";
-
+import "./feeds.css";
 const Feed = ({ fed }) => {
   const [openComment, setOpenComment] = useState(false);
 
@@ -73,6 +73,7 @@ const Feed = ({ fed }) => {
         <p>{fed?.content}</p>
         <img src={fed?.channel?.image} alt="" />
       </div>
+      {/* <hr style={{backgroundColor : "grey", marginTop: "15px", marginBottom: "5px"}} /> */}
       <div className="bottom-content">
         <div className="action-item" onClick={() => likeHandle(fed?._id)}>
           <span>

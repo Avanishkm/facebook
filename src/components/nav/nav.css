@@ -25,6 +25,11 @@ nav {
     align-items: center;
     gap: 30px;
   }
+  .icons{
+    display: flex;
+    align-items: center;
+    gap: 99px;
+  }
   .logo {
     color: var(--color-primary);
     font-size: 1.6rem;

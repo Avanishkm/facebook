@@ -24,9 +24,10 @@
   .post-categories {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 120px;
     text-align: center;
     padding: 1rem;
+    /* justify-content: space-between; */
   }
   .post-categories input {
     display: none;

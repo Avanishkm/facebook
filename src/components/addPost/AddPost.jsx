@@ -94,20 +94,20 @@ const AddPost = () => {
         <label htmlFor="file">
           <input type="file" id="file" onChange={handleImageChange} />
           <span>
-            <FontAwesomeIcon icon={faImage} /> Photos
+            <FontAwesomeIcon icon={faImage} style={{color: "#2e0196f1" , fontSize: "20px"}} /> Photos
           </span>
         </label>
         <label htmlFor="file">
           <input type="file" id="file" onChange={handleImageChange} />
           <span>
-            <FontAwesomeIcon icon={faVideo} /> Videos
+            <FontAwesomeIcon icon={faVideo} style={{color: "#bb0000f2" , fontSize: "20px"}} /> Videos
           </span>
         </label>
-        <span>
+        {/* <span>
           <FontAwesomeIcon icon={faTags} /> Tag
-        </span>
+        </span> */}
         <span>
-          <FontAwesomeIcon icon={faSmile} /> Feelings
+          <FontAwesomeIcon icon={faSmile} style={{color: "#bfc600ec" , fontSize: "20px"}} /> Feelings/Activity
         </span>
       </div>
       {image && (

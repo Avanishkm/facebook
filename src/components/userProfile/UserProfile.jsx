@@ -18,7 +18,7 @@ const UserProfile = () => {
           <h3>{user.name}</h3>
           <h5>{user.email}</h5>
         </div>
-        <div className="profile-button">
+        {/* <div className="profile-button">
           <Link to={"/chatbox/id"}>
             <button className="btn btn-primary">
               <FontAwesomeIcon icon={faMessage} />
@@ -30,7 +30,7 @@ const UserProfile = () => {
           <button className="btn btn-primary">
             <FontAwesomeIcon icon={faLink} />
           </button>
-        </div>
+        </div> */}
         {/* <p className="bio">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ad.
           Ad assumenda asperiores officia perspiciatis quo nulla? Corrupti,

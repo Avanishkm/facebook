@@ -35,6 +35,17 @@
     color: var(--color-soft);
     font-size: 0.9rem;
   }
+  .mode{
+    font-size: 26px;
+  }
+
+  .sidebarFriendList{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
   
   @media (max-width: 1024px) {
     .left-container {

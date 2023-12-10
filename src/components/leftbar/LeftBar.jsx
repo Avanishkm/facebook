@@ -10,9 +10,22 @@ import Watch from "../../assets/icon/4.png";
 import gallery from "../../assets/icon/5.png";
 import videos from "../../assets/icon/6.png";
 import message from "../../assets/icon/7.png";
+import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+
+import { useDispatch } from "react-redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { logout } from "../../Features/auth/authenticationSlice";
+import DarkMood from "../darkmod/DarkMood";
+import { Users, Usersonline } from "../../FakeApis/data";
+import Online from "../online/Online";
+import FriendReqe from "../friendReqe/FriendReqs";
 
 const LeftBar = () => {
+  const dispatch = useDispatch();
   const user = JSON.parse(localStorage.getItem("facebook-user"));
+  const logOut = () => {
+    dispatch(logout());
+  };
 
   return (
     <div className="leftBar">
@@ -54,28 +67,48 @@ const LeftBar = () => {
               <h4>Watch</h4>
             </div>
           </Link>
+          <Link>
+            <div className="item">
+              <div className="mode"><DarkMood /></div>
+              
+              <h4>Theme</h4>
+            </div>
+          </Link>
+          <div style={{fontSize: "23px"}}></div>
+            <div className="item">
+                <div className="logout" onClick={logOut}>
+                  <FontAwesomeIcon icon={faRightFromBracket} style={{fontSize: "25px", color:"blue"}} />
+                </div>
+              <h4>Logout</h4>
+            </div>
         </div>
         <hr />
         <div className="menu">
           <h4 className="others">Your Shortcuts</h4>
-          <Link to={"/comming"}>
+          <ul className='sidebarFriendList'>
+                {Users.map((u) =>(
+                    <FriendReqe key={u.id} user={u}/>
+                ))}
+                
+            </ul> 
+          {/* <Link to={"/comming"}>
             <div className="item">
               <img src={gallery} alt="" />
               <h4>Gallery</h4>
             </div>
-          </Link>
-          <Link to={"/comming"}>
+          </Link> */}
+          {/* <Link to={"/comming"}>
             <div className="item">
               <img src={videos} alt="" />
               <h4>Videos</h4>
             </div>
-          </Link>
-          <Link to={"/comming"}>
+          </Link> */}
+          {/* <Link to={"/comming"}>
             <div className="item">
               <img src={message} alt="" />
               <h4>Message</h4>
             </div>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

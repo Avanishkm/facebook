@@ -6,10 +6,12 @@ import {
   faBars,
   faBell,
   faEnvelope,
+  faGamepad,
   faHome,
   faRightFromBracket,
   faSearch,
   faUser,
+  faVideo,
 } from "@fortawesome/free-solid-svg-icons";
 import CurrentUser from "../../FakeApis/CurrentUserData";
 import DarkMood from "../darkmod/DarkMood";
@@ -24,9 +26,9 @@ const Nav = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const logOut = () => {
-    dispatch(logout());
-  };
+  // const logOut = () => {
+  //   dispatch(logout());
+  // };
 
   const getSearchResult = async () => {
     try {
@@ -38,7 +40,6 @@ const Nav = () => {
           },
         }
       );
-      // const res = await response.json();
 
       setPosts(response);
       console.log("post", posts);
@@ -48,7 +49,6 @@ const Nav = () => {
       console.error("Error fetching data:", error);
     }
   };
-
   const user = JSON.parse(localStorage.getItem("facebook-user"));
   return (
     <nav>
@@ -71,27 +71,37 @@ const Nav = () => {
               }}
             />
           </div>
-          <Link to={"/"}>
-            <FontAwesomeIcon icon={faHome} />
-          </Link>
-          <Link to={"/profile/id"}>
-            <FontAwesomeIcon icon={faUser} />
-          </Link>
         </div>
+        <div className="icons">
+            <Link to={"/"} >
+              <FontAwesomeIcon icon={faHome} style={{fontSize: "23px"}} />
+            </Link>
+            <Link to={"/profile/id"}>
+              <FontAwesomeIcon icon={faUser} style={{fontSize: "23px"}} />
+            </Link>
+            <Link to={"/"}>
+              <FontAwesomeIcon icon={faVideo} style={{fontSize: "23px"}} />
+            </Link>
+            <Link to={"/"}>
+              <FontAwesomeIcon icon={faGamepad} style={{fontSize: "23px"}} />
+            </Link>
+            
+          </div>
         <div className="nav-right">
           <Link to={"/chatbox"}>
-            <FontAwesomeIcon icon={faEnvelope} />
+            <FontAwesomeIcon icon={faEnvelope} style={{fontSize: "23px"}} />
           </Link>
           <Link to={"/"}>
-            <FontAwesomeIcon icon={faBell} />
+            <FontAwesomeIcon icon={faBell} style={{fontSize: "23px"}} />
           </Link>
-          <DarkMood />
+          {/* <div style={{fontSize: "23px"}}><DarkMood /></div> */}
+          
           <Link to={"/"}>
-            <FontAwesomeIcon icon={faBars} />
+            <FontAwesomeIcon icon={faBars} style={{fontSize: "23px"}} />
           </Link>
-          <div className="logout" onClick={logOut}>
+          {/* <div className="logout" onClick={logOut}>
             <FontAwesomeIcon icon={faRightFromBracket} />
-          </div>
+          </div> */}
           <div className="user">
             <img src={CurrentUser.map((user) => user.ProfieImage)} alt="" />
             <h4>{user.name}</h4>

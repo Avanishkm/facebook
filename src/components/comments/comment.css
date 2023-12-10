@@ -21,3 +21,6 @@
     color: var(--color-text);
   }
   
+  .user p{
+    padding-top: 14px;
+  }
