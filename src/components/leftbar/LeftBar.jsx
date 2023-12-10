@@ -2,6 +2,7 @@ import React from "react";
 import "./leftbar.css";
 import { Link } from "react-router-dom";
 import CurrentUser from "../../FakeApis/CurrentUserData";
+import Hospital from "../../assets/icon/H.png";
 import Friend from "../../assets/icon/1.png";
 import Groups from "../../assets/icon/2.png";
 import Market from "../../assets/icon/3.png";
@@ -21,6 +22,12 @@ const LeftBar = () => {
             <div className="user">
               <img src={CurrentUser.map((user) => user.ProfieImage)} alt="" />
               <h4>{user.name}</h4>
+            </div>
+          </Link>
+          <Link to={"/comming"}>
+            <div className="item">
+              <img src={Hospital} alt="" />
+              <h4>COVID-19 Information Centre</h4>
             </div>
           </Link>
           <Link to={"/comming"}>

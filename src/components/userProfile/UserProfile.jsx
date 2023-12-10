@@ -31,11 +31,11 @@ const UserProfile = () => {
             <FontAwesomeIcon icon={faLink} />
           </button>
         </div>
-        <p className="bio">
+        {/* <p className="bio">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ad.
           Ad assumenda asperiores officia perspiciatis quo nulla? Corrupti,
           assumenda ut.
-        </p>
+        </p> */}
       </div>
     </div>
   );

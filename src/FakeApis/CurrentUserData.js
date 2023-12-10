@@ -1,5 +1,5 @@
-import ProfieImage from "../assets/img/CurentProfile.jpeg";
-import CoverPhoto from "../assets/img/CoverPhotos.jpg";
+import ProfieImage from "../assets/img/profilePic1.webp";
+import CoverPhoto from "../assets/img/facebook-cover.jpg";
 
 const CurrentUser = [
   {

@@ -1,26 +1,35 @@
-.rightBar {
-    height: calc(100vh-3.6rem);
-    /* background: var(--color-card); */
+
+.rightbarhome{
+    flex: 3.5;
+    height: calc(100vh - 50px);
     position: sticky;
-    top: 3.6rem;
-    overflow: auto;
-  }
-  .rightBar ::-webkit-scrollbar {
-    display: none;
-  }
-  .rightbar-container {
-    width: 80%;
-    /* margin: 0 auto; */
-  }
-  
-  @media (max-width: 1024px) {
-    .rightbar-container {
-      width: 90%;
+    top: 50px;
+    overflow-y: scroll;
+    
+    .birthdayContainer{
+        display: flex;
+        align-items: center;
+
+        .birthdayImg{
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+        .birthdayText{
+            font-weight: 300;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        
     }
-  }
-  @media (max-width: 768px) {
-    .rightBar {
-      display: none;
+    .rightbarAdvert{
+        width: 100%;
+        margin: 30px 0;
+        border-radius: 10px;
+        cursor: pointer;
     }
-  }
-  
+    .rightbarTitle{
+        display: flex;
+        margin-bottom: 20px;
+    }
+}
