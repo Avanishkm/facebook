@@ -217,7 +217,8 @@
   .register_logo {
     margin-top: 35px;
     height: 100px;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
+    width: 70%;
   }
   
   .register_container {
@@ -367,8 +368,8 @@
     color: #1877f2;
     font-family: SFProText-Semibold, Helvetica, Arial, sans-serif;
     font-size: 17px;
-    line-height: 20px;
-    margin-bottom: 20px;
+    line-height: 30px;
+    margin-bottom: 30px;
   }
   
   a {
