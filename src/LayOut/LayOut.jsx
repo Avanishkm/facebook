@@ -21,6 +21,7 @@ import RightBar from "../components/rightbar/RightBar";
 import PrivateRoute from "./PrivateRoute";
 import SearchPage from "../pages/searchPage/SearchPage";
 import CommingSoon from "../pages/commingSoon/CommingSoon";
+import CreatePage from "../pages/createPage/CreatePage";
 
 const LayOut = () => {
   // Feed.......
@@ -82,6 +83,8 @@ const LayOut = () => {
               <Route path="/chatbox" element={<ChatBox />} />
               <Route path="/search" element={<SearchPage />} />
               <Route path="/comming" element={<CommingSoon />} />
+              <Route path="/createpage" element={<CreatePage />} />
+
             </Route>
           </Route>
         </Routes>

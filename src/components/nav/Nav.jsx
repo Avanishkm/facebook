@@ -23,12 +23,13 @@ import { setSearchPost } from "../../Features/auth/searchSlice";
 const Nav = () => {
   const [searchText, setSearchText] = useState();
   const [posts, setPosts] = useState({});
+  const [openDropMenu, setOpenDropMenu] = useState(false)
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // const logOut = () => {
-  //   dispatch(logout());
-  // };
+  const logOut = () => {
+    dispatch(logout());
+  };
 
   const getSearchResult = async () => {
     try {
@@ -44,18 +45,27 @@ const Nav = () => {
       setPosts(response);
       console.log("post", posts);
       dispatch(setSearchPost(response));
-      navigate("/search", { state: { searchpost: "chandan" } });
+      navigate("/search", { state: { searchpost: "Avanish" } });
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
+
+  const handleDropMenu = () => {
+    setOpenDropMenu(!openDropMenu);
+  }
   const user = JSON.parse(localStorage.getItem("facebook-user"));
   return (
     <nav>
       <div className="nav-container">
         <div className="nav-left">
           <Link to={"/"}>
-            <h3 className="logo">facebook</h3>
+            {/* <h3 className="logo">facebook</h3> */}
+            <img
+              src="https://i.ibb.co/72dN4JJ/Facebook-icon-2019-1.png"
+              alt=""
+              style={{ width: "40px", height: "40px" }}
+            />
           </Link>
           <div className="Nav-Searchbar">
             <FontAwesomeIcon icon={faSearch} />
@@ -102,9 +112,29 @@ const Nav = () => {
           {/* <div className="logout" onClick={logOut}>
             <FontAwesomeIcon icon={faRightFromBracket} />
           </div> */}
-          <div className="user">
+          {/* new */}
+          <div className="user" onClick={handleDropMenu}>
             <img src={CurrentUser.map((user) => user.ProfieImage)} alt="" />
-            <h4>{user.name}</h4>
+            {/* <img src={localStorage.getItem("profileImage")} alt="" /> */}
+            {openDropMenu && (
+            <div className="drop-down">
+              <Link to={"/profile/id"}>
+                <div className="user">
+                  {/* <img src={localStorage.getItem("profileImage")} alt="" /> */}
+                  <img src={CurrentUser.map((user) => user.ProfieImage)} alt="" />
+                  <h4>{user.name}</h4>
+                </div>
+              </Link>
+              <div className="hr"></div>
+              <div className="drop-list">
+                  <div className="logout" onClick={logOut}>
+                    <FontAwesomeIcon icon={faRightFromBracket} />
+                    <h4>Logout</h4>
+                  </div>
+                </div>
+            </div>
+            )}
+            {/* <h4>{user.name}</h4> */}
           </div>
         </div>
       </div>

@@ -6,11 +6,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faImage,
   faSmile,
-  faTags,
   faVideo,
 } from "@fortawesome/free-solid-svg-icons";
 import { toast } from "react-toastify";
-import axios from "axios";
+
 
 const AddPost = () => {
   const [title, setTitle] = useState("");
@@ -47,23 +46,25 @@ const AddPost = () => {
       "https://academics.newtonschool.co/api/v1/facebook/post",
       requestOptions
     )
-      .then((response) => {
-        if (response.ok) {
+      .then(async (response) => {
+        const res = await response.json();
+        console.log("status", res);
+        if (res.status === "success") {
           setTextValue("");
           setImage(null);
           setImageURL(null);
-          toast.success(response.message, {
+          toast.success(res.message, {
             position: toast.POSITION.TOP_CENTER,
           });
         } else {
-          toast.error(response.message, {
+          toast.error(res.message, {
             position: toast.POSITION.TOP_CENTER,
           });
         }
         return response;
       })
       .then((result) => {
-        console.log(result);
+        console.log("result", result);
       })
       .catch((error) => {
         console.log("error", error);
@@ -73,6 +74,7 @@ const AddPost = () => {
     <form className="postForm">
       <div className="user form-top">
         <img src={CurrentUser.map((user) => user.ProfieImage)} alt="" />
+        {/* <img src={localStorage.getItem("profileImage")} alt="" /> */}
         <input
           type="text"
           placeholder="What's on your mind ?"

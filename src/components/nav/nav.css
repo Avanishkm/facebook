@@ -52,7 +52,43 @@ nav {
     align-items: center;
     gap: 30px;
   }
+  .user{
+    position: relative;
+  }
+  .drop-down {
+    position: absolute;
+    top: 33px;
+    right: 15px;
+    height: auto;
+    width: 160px;
+    padding: 20px;
+    background: var(--color-bg);
+    border-radius: 5px;
+  }
+
+  .drop-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .drop-down .drop-list .logout {
+    width: 100%;
+    display: flex;
+    justify-content: space-between !important;
   
+    align-items: center;
+  }
+  .drop-list h4 {
+    color: var(--color-soft);
+  }
+  .hr {
+    border: 1px solid var(--color-card);
+    margin: 10px 0;
+  }
+  .logout{
+    font-size: 16px;
+    padding: 20px;
+  }
   @media (max-width: 768px) {
     nav .user {
       display: none;

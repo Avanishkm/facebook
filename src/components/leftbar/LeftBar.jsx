@@ -10,6 +10,7 @@ import Watch from "../../assets/icon/4.png";
 import gallery from "../../assets/icon/5.png";
 import videos from "../../assets/icon/6.png";
 import message from "../../assets/icon/7.png";
+import Page from "../../assets/icon/pageFlag.png"
 import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 
 import { useDispatch } from "react-redux";
@@ -23,9 +24,9 @@ import FriendReqe from "../friendReqe/FriendReqs";
 const LeftBar = () => {
   const dispatch = useDispatch();
   const user = JSON.parse(localStorage.getItem("facebook-user"));
-  const logOut = () => {
-    dispatch(logout());
-  };
+  // const logOut = () => {
+  //   dispatch(logout());
+  // };
 
   return (
     <div className="leftBar">
@@ -67,20 +68,25 @@ const LeftBar = () => {
               <h4>Watch</h4>
             </div>
           </Link>
+          <Link to={"/createpage"}>
+            <div className="item">
+              <img src={Page} alt="" />
+              <h4>Page</h4>
+            </div>
+          </Link>
           <Link>
             <div className="item">
               <div className="mode"><DarkMood /></div>
-              
               <h4>Theme</h4>
             </div>
           </Link>
           <div style={{fontSize: "23px"}}></div>
-            <div className="item">
+            {/* <div className="item">
                 <div className="logout" onClick={logOut}>
                   <FontAwesomeIcon icon={faRightFromBracket} style={{fontSize: "25px", color:"blue"}} />
                 </div>
               <h4>Logout</h4>
-            </div>
+            </div> */}
         </div>
         <hr />
         <div className="menu">
@@ -88,8 +94,7 @@ const LeftBar = () => {
           <ul className='sidebarFriendList'>
                 {Users.map((u) =>(
                     <FriendReqe key={u.id} user={u}/>
-                ))}
-                
+                ))}   
             </ul> 
           {/* <Link to={"/comming"}>
             <div className="item">
