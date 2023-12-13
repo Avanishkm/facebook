@@ -83,8 +83,7 @@ const LayOut = () => {
               <Route path="/chatbox" element={<ChatBox />} />
               <Route path="/search" element={<SearchPage />} />
               <Route path="/comming" element={<CommingSoon />} />
-              <Route path="/createpage" element={<CreatePage />} />
-
+              {/* <Route path="/createpage" element={<CreatePage />} /> */}
             </Route>
           </Route>
         </Routes>

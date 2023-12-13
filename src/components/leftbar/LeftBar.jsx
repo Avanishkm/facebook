@@ -68,12 +68,12 @@ const LeftBar = () => {
               <h4>Watch</h4>
             </div>
           </Link>
-          <Link to={"/createpage"}>
+          {/* <Link to={"/createpage"}>
             <div className="item">
               <img src={Page} alt="" />
               <h4>Page</h4>
             </div>
-          </Link>
+          </Link> */}
           <Link>
             <div className="item">
               <div className="mode"><DarkMood /></div>

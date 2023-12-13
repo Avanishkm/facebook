@@ -126,7 +126,7 @@ const Nav = () => {
                 </div>
               </Link>
               <div className="hr"></div>
-              <div className="drop-list">
+                <div className="drop-list">
                   <div className="logout" onClick={logOut}>
                     <FontAwesomeIcon icon={faRightFromBracket} />
                     <h4>Logout</h4>
@@ -134,7 +134,6 @@ const Nav = () => {
                 </div>
             </div>
             )}
-            {/* <h4>{user.name}</h4> */}
           </div>
         </div>
       </div>

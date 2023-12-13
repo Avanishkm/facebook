@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./addPost.css";
 import CurrentUser from "../../FakeApis/CurrentUserData"
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faImage,
@@ -105,9 +104,6 @@ const AddPost = () => {
             <FontAwesomeIcon icon={faVideo} style={{color: "#bb0000f2" , fontSize: "20px"}} /> Videos
           </span>
         </label>
-        {/* <span>
-          <FontAwesomeIcon icon={faTags} /> Tag
-        </span> */}
         <span>
           <FontAwesomeIcon icon={faSmile} style={{color: "#bfc600ec" , fontSize: "20px"}} /> Feelings/Activity
         </span>
