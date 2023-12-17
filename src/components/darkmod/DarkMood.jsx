@@ -1,15 +1,7 @@
 import React from "react";
 import "./darkMood.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBars,
-  faBell,
-  faEnvelope,
-  faHome,
-  faLightbulb,
-  faSearch,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
+import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 
 const DarkMood = () => {
   const Darkhandle = () => {
