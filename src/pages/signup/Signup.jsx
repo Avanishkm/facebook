@@ -126,58 +126,6 @@ const Signup = () => {
     </div>
         </div>
     </div>
-    // <div className="signup">
-    //   <ToastContainer />
-    //   <div className="card">
-    //     <div className="left">
-    //       <h2>
-    //         -<br />
-    //         facebook Signup
-    //         <br />-
-    //       </h2>
-    //       <p>
-    //         facebook helps you connect and share with the people in your life.
-    //       </p>
-    //       <span>Have An Account?</span>
-    //       <Link to={"/login"}>
-    //         <button className="btn btn-primary">Login</button>
-    //       </Link>
-    //     </div>
-    //     <form className="right">
-    //       <input
-    //         type="text"
-    //         required
-    //         placeholder="User Name"
-    //         value={userName}
-    //         onChange={(e) => setUserName(e.target.value)}
-    //       />
-    //       <input
-    //         type="email"
-    //         required
-    //         placeholder="Email"
-    //         value={email}
-    //         onChange={(e) => setEmail(e.target.value)}
-    //       />
-    //       <input
-    //         type="password"
-    //         required
-    //         placeholder="passsword"
-    //         value={password}
-    //         onChange={(e) => setPassword(e.target.value)}
-    //       />
-    //       <button
-    //         type="submit"
-    //         className="btn"
-    //         onClick={(e) => {
-    //           e.preventDefault();
-    //           SignUp();
-    //         }}
-    //       >
-    //         Register
-    //       </button>
-    //     </form>
-    //   </div>
-    // </div>
   );
 };
 

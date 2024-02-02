@@ -71,7 +71,7 @@ const Feed = ({ fed }) => {
       </div>
       <div className="mid-content">
         <p>{fed?.content}</p>
-        <img src={fed?.channel?.image} alt="" />
+        <img src={fed?.images} alt="" />
       </div>
       {/* <hr style={{backgroundColor : "grey", marginTop: "15px", marginBottom: "5px"}} /> */}
       <div className="bottom-content">
